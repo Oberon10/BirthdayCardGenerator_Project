@@ -1,0 +1,55 @@
+.navbar{
+	background-color: #e3f2fd;
+	font-weight: bolder;
+}
+.highlight{
+	color: teal;
+}
+.nav-link{
+	border-right: solid;
+}
+.navbar-nav a:hover:not(.active) {
+  background-color: green;
+  color: white;
+}
+#showcase{
+    min-height: 400px;
+    background: url('../img/birthday_card.jpg')  0 -400px;
+    text-align: center;
+    padding: 5%;
+    font-weight: bold;
+}
+#showcase h1{
+    margin-bottom:10px;
+    font-weight: bold;
+}
+#showcase p{
+    font-size: 20px;
+}
+#About{
+	
+}
+#offer{
+	margin-top: 1%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;    
+  }
+.clear{
+    clear: both;
+    padding: 1%;
+}
+#footer{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color: #e3f2fd;
+}
+#reg{
+	margin: 5%;
+}
+#login{
+	margin: 5%;
+}
