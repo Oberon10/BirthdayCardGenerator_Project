@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include 'header.php' ?>
 <?php include 'nav.php' ?>
 <?php include 'connect.php' ?>
@@ -12,7 +13,8 @@
           
           if (mysqli_num_rows($result) > 0) {
             // output data of each row
-
+            $row = mysqli_fetch_assoc($result);
+            $_SESSION['user'] = $row['user_id'];
             header("Location: home.php");
 
           } else {
