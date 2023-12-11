@@ -11,6 +11,16 @@
         <a class="nav-link" href="index.php#offer">Offer</a>
         <a class="nav-link" href="login.php">Login</a>
         <a class="nav-link" href="reg.php">Register</a>
+        <?php
+        if(isset($_SESSION['user_id'])){
+          ?>
+         
+        <a class="nav-link" href="home.php">Home</a>
+        <a class="nav-link" href="logout.php">Logout</a>
+       
+        <?php
+      }
+        ?>
       </div>
     </div>
   </div>

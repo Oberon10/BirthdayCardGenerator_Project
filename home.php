@@ -19,12 +19,16 @@
                 </div>
             </div>
             <div class="row mb-3">
-            <input type="checkbox" id="wishes" name="wishes" value="wish1" class="form-check-input">
-            <label for="wishes" class="form-check-label"> Another year older, wiser, and more fabulous! May this year bring you growth, joy, and all the amazing things you deserve. Happy birthday!</label><br>
-            <input type="checkbox" id="wishes" name="wishes" value="wish2" class="form-check-input">
-            <label for="wishes" class="form-check-label"> As you blow out the candles, may all your wishes come true. Happy birthday and here's to chasing your dreams!</label><br>
-            <input type="checkbox" id="wishes" name="wishes" value="wish3" class="form-check-input">
-            <label for="wishes" class="form-check-label">Sending you the warmest birthday wishes and hoping your day is as special as you are. Happy birthday!</label>
+                <?php
+                $res = mysqli_query($conn, "SELECT * FROM greetings");
+                // output data of each row
+                while ( $result = mysqli_fetch_assoc($res)) {      
+                ?>
+             <input type="checkbox" id="wishes" name="wishes" value="<?php echo $result['id'];?>" class="form-check-input">
+            <label for="wishes" class="form-check-label"><?php echo $result['greetings'];?> </label>
+<?php
+}
+?>
             </div>
  
   <button type="submit" class="btn btn-primary">Generate</button>
